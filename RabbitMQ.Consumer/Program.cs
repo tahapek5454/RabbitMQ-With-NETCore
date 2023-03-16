@@ -14,12 +14,20 @@ using IConnection connection = factory.CreateConnection();
 using IModel channel = connection.CreateModel();
 
 // queue olusturma
-channel.QueueDeclare(queue: "example-queue", exclusive: false); // consumerla baglanmak amaciyla exclusive false verdik
+channel.QueueDeclare(queue: "example-queue", durable: true, exclusive: false); // consumerla baglanmak amaciyla exclusive false verdik
 // consumerdaki kuyruk publisherla ayni olmak zorunda
+
+
+
+channel.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false);
+// bu islemle fair patch saglamis olduk
 
 // queue'dan mesaj okuma
 EventingBasicConsumer consumer = new(channel);
-channel.BasicConsume(queue: "example-queue", false, consumer: consumer); // ne zaman kuyruktaki consumera bilgi gelir consume et
+channel.BasicConsume(queue: "example-queue", autoAck: false, consumer: consumer); // ne zaman kuyruktaki consumera bilgi gelir consume et
+// autoaAck false bizden mesaj beklicek
+
+
 // receive bir delegate
 consumer.Received += (sender, e) =>
 {
@@ -29,6 +37,8 @@ consumer.Received += (sender, e) =>
     // e.body.span ya da e.body.ToArray() verisini byte olarak getirir.
 
     Console.WriteLine(Encoding.UTF8.GetString(e.Body.Span));
+    // mesajla ilgili bildiride bulunalim
+    channel.BasicAck(deliveryTag: e.DeliveryTag, multiple: false); // ilgili mesaji onayladik
 
 };
 
