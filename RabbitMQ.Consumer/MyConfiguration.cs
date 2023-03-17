@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace RabbitMQ.Publisher
+namespace RabbitMQ.Consumer
 {
     public static class MyConfiguration
     {    

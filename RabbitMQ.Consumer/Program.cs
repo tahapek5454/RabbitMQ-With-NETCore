@@ -1,7 +1,7 @@
 ﻿
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
-using RabbitMQ.Publisher;
+using RabbitMQ.Consumer;
 using System.Text;
 
 ConnectionFactory factory = new ConnectionFactory();
