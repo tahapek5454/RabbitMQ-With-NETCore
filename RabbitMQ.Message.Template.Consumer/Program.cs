@@ -78,7 +78,7 @@ consumer.Received += (sender, e) =>
     Console.WriteLine(Encoding.UTF8.GetString(e.Body.Span));
 };
 
-# endregion
+#endregion
 
 
 #region Request/Response Tasarımı
@@ -102,7 +102,7 @@ consumer.Received += (sender, e) =>
 //    IBasicProperties basicProperties = channel.CreateBasicProperties();
 //    // ayni id yi verdik ki tanisin
 //    basicProperties.CorrelationId = e.BasicProperties.CorrelationId;
-    
+
 
 //    channel.BasicPublish(exchange: string.Empty, routingKey:e.BasicProperties.ReplyTo, basicProperties: basicProperties, body: message);
 
