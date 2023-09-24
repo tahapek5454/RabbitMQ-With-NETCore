@@ -37,9 +37,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQ.ESB.MassTransit.Wo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQ.ESB.MassTransit.WorkerService.Consumer", "RabbitMQ.ESB.MassTransit.WorkerService.Consumer\RabbitMQ.ESB.MassTransit.WorkerService.Consumer.csproj", "{0D0A0092-E43A-45EC-8817-D7800246875C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.ESB.MassTransit.RequestResponse.Producer", "RabbitMQ.ESB.MassTransit.RequestResponse.Producer\RabbitMQ.ESB.MassTransit.RequestResponse.Producer.csproj", "{EDA2F9C8-8143-40DD-9D30-96F99297F3CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQ.ESB.MassTransit.RequestResponse.Producer", "RabbitMQ.ESB.MassTransit.RequestResponse.Producer\RabbitMQ.ESB.MassTransit.RequestResponse.Producer.csproj", "{EDA2F9C8-8143-40DD-9D30-96F99297F3CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.ESB.MassTransit.RequestResponse.Consumer", "RabbitMQ.ESB.MassTransit.RequestResponse.Consumer\RabbitMQ.ESB.MassTransit.RequestResponse.Consumer.csproj", "{9D90B1DA-12D0-4BA0-93F5-375A3AB19EB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQ.ESB.MassTransit.RequestResponse.Consumer", "RabbitMQ.ESB.MassTransit.RequestResponse.Consumer\RabbitMQ.ESB.MassTransit.RequestResponse.Consumer.csproj", "{9D90B1DA-12D0-4BA0-93F5-375A3AB19EB7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RabbitMQ.ESB.MassTransit.Order.Ex", "RabbitMQ.ESB.MassTransit.Order.Ex", "{E9D42012-43FB-49AB-AA3F-655EB8B9324E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.API", "RabbitMQ.ESB.MassTransit.Order.Ex\Order.API\Order.API.csproj", "{406F636F-5465-4DC7-9001-3EBEDA44D959}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payment.API", "RabbitMQ.ESB.MassTransit.Order.Ex\Payment.API\Payment.API.csproj", "{C640DBB5-73EB-46ED-B843-13E68E2AC0E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stock.API", "RabbitMQ.ESB.MassTransit.Order.Ex\Stock.API\Stock.API.csproj", "{2DF3BBC4-28B3-4B65-BB60-06DE3FB0D59A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "RabbitMQ.ESB.MassTransit.Order.Ex\Shared\Shared.csproj", "{F40E4C4C-43A5-462C-93F5-03F4F4E20282}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,9 +133,31 @@ Global
 		{9D90B1DA-12D0-4BA0-93F5-375A3AB19EB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D90B1DA-12D0-4BA0-93F5-375A3AB19EB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D90B1DA-12D0-4BA0-93F5-375A3AB19EB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{406F636F-5465-4DC7-9001-3EBEDA44D959}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{406F636F-5465-4DC7-9001-3EBEDA44D959}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{406F636F-5465-4DC7-9001-3EBEDA44D959}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{406F636F-5465-4DC7-9001-3EBEDA44D959}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C640DBB5-73EB-46ED-B843-13E68E2AC0E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C640DBB5-73EB-46ED-B843-13E68E2AC0E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C640DBB5-73EB-46ED-B843-13E68E2AC0E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C640DBB5-73EB-46ED-B843-13E68E2AC0E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DF3BBC4-28B3-4B65-BB60-06DE3FB0D59A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DF3BBC4-28B3-4B65-BB60-06DE3FB0D59A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DF3BBC4-28B3-4B65-BB60-06DE3FB0D59A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DF3BBC4-28B3-4B65-BB60-06DE3FB0D59A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F40E4C4C-43A5-462C-93F5-03F4F4E20282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F40E4C4C-43A5-462C-93F5-03F4F4E20282}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F40E4C4C-43A5-462C-93F5-03F4F4E20282}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F40E4C4C-43A5-462C-93F5-03F4F4E20282}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{406F636F-5465-4DC7-9001-3EBEDA44D959} = {E9D42012-43FB-49AB-AA3F-655EB8B9324E}
+		{C640DBB5-73EB-46ED-B843-13E68E2AC0E9} = {E9D42012-43FB-49AB-AA3F-655EB8B9324E}
+		{2DF3BBC4-28B3-4B65-BB60-06DE3FB0D59A} = {E9D42012-43FB-49AB-AA3F-655EB8B9324E}
+		{F40E4C4C-43A5-462C-93F5-03F4F4E20282} = {E9D42012-43FB-49AB-AA3F-655EB8B9324E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4A539D66-EC07-486D-B7A9-9568F3F3D1E1}
