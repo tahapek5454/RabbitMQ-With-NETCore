@@ -18,6 +18,8 @@ IBusControl bus = Bus.Factory.CreateUsingRabbitMq(factory =>
 
         // burdaki consumera ozel sinif olusturmaliyiz ve ona veri tipini de vermeliyiz
         endpoint.Consumer<ExampleMessageConsumer>();
+
+        endpoint.UseRetry(r => r.Immediate(5));
     
     });
 });
